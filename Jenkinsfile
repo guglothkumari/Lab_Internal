@@ -19,7 +19,7 @@ pipeline {
 
         stage('Docker Image Push') {
             steps {
-                echo 'Pushing the Docker image to Docker Hub...'
+                echo 'Pushing the Docker image to Docker Hub'
                 bat 'docker tag myapp:latest guglothkumari/myapp:latest'
                 bat 'docker push guglothkumari/myapp:latest'
             }
@@ -27,7 +27,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                echo 'Running the Docker container...'
+                echo 'Running the Docker container'
                 bat 'docker run -d -p 5000:5000 myapp:latest'
             }
         }
