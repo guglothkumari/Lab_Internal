@@ -34,8 +34,7 @@ pipeline{
                 bat 'docker run -d -p 5000:5000 guglothkumari/myapp:latest'
             }
         }
-    }
-    post{
+        post{
         success{
             echo 'Pipeline completed successfully!'
         }
@@ -44,3 +43,4 @@ pipeline{
         }
     }
 }
+    
